@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>หน้าแรก | HEALTH & FIT</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310b981'%3E%3Cpath d='M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z'/%3E%3C/svg%3E">
+</head>
+<!-- หน้า: หน้าแรก  |  ผู้รับผิดชอบ: ____________ -->
+<body data-page="home">
+<header id="site-header"></header>
+<main>
+<h1><i data-ic="home" data-s="26"></i> หน้าแรก</h1>
+<div class="banner">
+  <h1>โปรโมชั่นคอร์สสุขภาพพิเศษ</h1>
+  <p>ลด 20% ทุกคอร์สสำหรับสมาชิกใหม่ ถึงสิ้นปีนี้</p>
+  <a class="btn" style="background:#fff;color:#115e59" href="login.html">สมัครสมาชิก</a>
+</div>
+<div class="card" style="margin-top:16px">
+  <div class="row">
+    <input id="q" placeholder="ค้นหาโปรแกรม...">
+    <select id="g"><option value="">เลือกเป้าหมาย: ทั้งหมด</option><option>ลดน้ำหนัก</option><option>สร้างกล้ามเนื้อ</option><option>ยืดหยุ่น</option><option>โภชนาการ</option></select>
+    <select id="e"><option value="">เลือกอุปกรณ์: ทั้งหมด</option><option>ไม่ใช้อุปกรณ์</option><option>ดัมเบล</option><option>เสื่อโยคะ</option></select>
+    <button class="btn" onclick="goSearch()">ค้นหา</button>
+  </div>
+</div>
+<h2>คอร์สออกกำลังกายแนะนำ</h2>
+<div class="grid" id="featured"></div>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/app.js"></script>
+<script>
+layout();
+featured();   // แสดงการ์ดคอร์สแนะนำ (ข้อมูลอยู่ใน js/app.js)
+</script>
+</body>
+</html>

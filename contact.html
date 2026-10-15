@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ติดต่อเรา / เกี่ยวกับเรา | HEALTH & FIT</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310b981'%3E%3Cpath d='M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z'/%3E%3C/svg%3E">
+</head>
+<!-- หน้า: ติดต่อเรา / เกี่ยวกับเรา  |  ผู้รับผิดชอบ: ____________ -->
+<body data-page="contact">
+<header id="site-header"></header>
+<main>
+<h1>
+  <i data-ic="contact" data-s="26"></i>
+  หน้าติดต่อเรา / เกี่ยวกับเรา
+</h1>
+<div class="two">
+  <form class="card" onsubmit="event.preventDefault();this.reset();toast('ส่งข้อความเรียบร้อย ขอบคุณที่ติดต่อเรา')">
+    <b>ส่งข้อความถึงเรา</b>
+    <label>ชื่อของคุณ</label>
+    <input required placeholder="กรอกชื่อ-นามสกุล">
+    <label>เบอร์โทรศัพท์</label>
+    <input type="tel" pattern="0[0-9]{8,9}" title="กรอกเบอร์โทร 9-10 หลัก เช่น 0812345678" placeholder="เช่น 0812345678">
+    <label>ข้อความ</label>
+    <textarea rows="4" required placeholder="รายละเอียดเรื่องที่ต้องการติดต่อ..."></textarea>
+    <button class="btn w" style="margin-top:12px">ส่งข้อความ</button>
+  </form>
+  <div>
+    <div class="card">
+      <b>ช่องทางการติดต่อหลัก</b>
+      <p class="mu">หากท่านมีข้อสงสัยหรือต้องการข้อมูลเพิ่มเติมเกี่ยวกับคอร์สออกกำลังกาย สามารถติดต่อเราได้ที่:</p>
+      <i data-ic="phone" data-s="16"></i>
+      เบอร์โทรศัพท์: 02-123-4567
+      <br>
+      <i data-ic="mail" data-s="16"></i>
+      อีเมล: s69122202057@healthfit.com
+      <br>
+      <i data-ic="clock" data-s="16"></i>
+      เปิดทำการ: จ.–ศ. 9:00–18:00 น.
+    </div>
+    <div class="note" style="margin-top:14px">
+      <i data-ic="pulse" data-s="34"></i>
+      <br>
+      <b>มุ่งมั่นสร้างสุขภาพที่ดีให้ทุกคน</b>
+      <div class="mu">ระบบวางแผนสุขภาพและการออกกำลังกายครบวงจร</div>
+    </div>
+  </div>
+</div>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/app.js"></script>
+<script>
+layout();
+</script>
+</body>
+</html>

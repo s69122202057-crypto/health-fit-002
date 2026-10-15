@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>เข้าสู่ระบบ / สมัครสมาชิก | HEALTH & FIT</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310b981'%3E%3Cpath d='M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z'/%3E%3C/svg%3E">
+</head>
+<!-- หน้า: เข้าสู่ระบบ / สมัครสมาชิก  |  ผู้รับผิดชอบ: ____________ -->
+<body data-page="login">
+<header id="site-header"></header>
+<main>
+<h1>
+  <i data-ic="user" data-s="26"></i>
+  หน้าเข้าสู่ระบบ / สมัครสมาชิก
+</h1>
+<div class="two">
+  <form class="card" onsubmit="return doLogin(event)">
+    <h2 style="margin-top:0;text-align:center">เข้าสู่ระบบ</h2>
+    <label>อีเมล</label>
+    <input id="li" type="email" required placeholder="กรอกอีเมลของคุณ">
+    <label>รหัสผ่าน</label>
+    <input id="lp" type="password" required placeholder="กรอกรหัสผ่าน">
+    <div style="text-align:right;margin:6px 0">
+      <a class="mu" style="color:var(--g2);cursor:pointer" onclick="forgot()">ลืมรหัสผ่าน?</a>
+    </div>
+    <button class="btn w">เข้าสู่ระบบ</button>
+  </form>
+  <form class="card" onsubmit="return doReg(event)">
+    <h2 style="margin-top:0;text-align:center">สร้างบัญชีผู้ใช้</h2>
+    <label>ชื่อ-นามสกุล</label>
+    <input id="rn" required placeholder="ชื่อ-นามสกุล">
+    <label>อีเมล</label>
+    <input id="re" type="email" required placeholder="example@email.com">
+    <label>รหัสผ่าน</label>
+    <input id="rp" type="password" minlength="8" required placeholder="อย่างน้อย 8 ตัวอักษร">
+    <label>เป้าหมายของคุณ</label>
+    <select id="rg">
+      <option>ลดน้ำหนัก</option>
+      <option>สร้างกล้ามเนื้อ</option>
+      <option>สุขภาพทั่วไป</option>
+    </select>
+    <label style="font-weight:400">
+      <input type="checkbox" required style="width:auto">
+      ยอมรับเงื่อนไขการใช้งาน
+    </label>
+    <button class="btn w" style="margin-top:8px">สมัครสมาชิก</button>
+  </form>
+</div>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/app.js"></script>
+<script>
+layout();
+</script>
+</body>
+</html>

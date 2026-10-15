@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>รายละเอียดคอร์ส | HEALTH & FIT</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310b981'%3E%3Cpath d='M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z'/%3E%3C/svg%3E">
+</head>
+<!-- หน้า: รายละเอียดคอร์ส  |  ผู้รับผิดชอบ: ____________ -->
+<body data-page="detail">
+<header id="site-header"></header>
+<main>
+<div id="app"></div>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/app.js"></script>
+<script>
+layout();
+// หน้านี้สร้างจากข้อมูลคอร์สตาม ?id= ใน URL (เช่น detail.html?id=2)
+const render=a=>{const c=C.find(x=>x.id==a)||C[0];return`<h1>${I('info',26)} หน้ารายละเอียดคอร์ส</h1><div class="two"><div><div class="ph" style="height:240px;align-content:center;gap:8px">${I(c.e,96)}<span class="mu">วิดีโอตัวอย่างคอร์ส</span></div><div class="row" style="margin-top:10px"><button class="btn o" onclick="go('prev')">${I('play',18)} ตัวอย่าง EP.1</button><button class="btn o" onclick="go('sched')">${I('calendar',18)} ตารางฝึก</button></div></div>
+<div><h2 style="margin-top:0">${c.n}</h2><div class="price" style="font-size:24px">${f(c.p)} <span class="mu">(เข้าถึงได้ตลอดชีพ)</span></div><div class="card" style="margin:12px 0;font-size:14px">• <b>ผู้สอน:</b> ${c.by}<br>• <b>ระยะเวลา:</b> 30 วัน (วันละ ${c.m})<br>• <b>ระดับ:</b> ${c.lv} · <b>อุปกรณ์:</b> ${c.eq}<br>• <b>แคลอรี่ที่เผาผลาญ:</b> ${c.kc=='-'?'-':'~'+c.kc+' kcal/วัน'}<br>• ${c.d}</div><div class="row"><button class="btn" style="flex:4" onclick="enroll(${c.id})">${I('cart',18)} สมัครคอร์สนี้เลย</button><button class="btn o" onclick="fav(${c.id})">${I('heart',18)}</button></div></div></div>
+<h2 id="prev">เนื้อหาคอร์ส</h2><div class="tw card"><table><tr><th>ตอน</th><th>หัวข้อ</th><th>ความยาว</th><th>สถานะ</th></tr><tr><td>EP.1</td><td>แนะนำคอร์สและการวอร์มอัพ</td><td>12 นาที</td><td>ดูตัวอย่างฟรี</td></tr><tr><td>EP.2</td><td>พื้นฐานท่าออกกำลังกายและท่าที่ถูกต้อง</td><td>20 นาที</td><td>หลังสมัคร</td></tr><tr><td>EP.3</td><td>โปรแกรมสัปดาห์ที่ 1</td><td>30 นาที</td><td>หลังสมัคร</td></tr><tr><td>EP.4</td><td>การคูลดาวน์และการฟื้นฟูร่างกาย</td><td>10 นาที</td><td>หลังสมัคร</td></tr></table></div>
+<h2 id="sched">ตารางฝึก 4 สัปดาห์ (ตัวอย่าง)</h2><div class="tw card"><table><tr><th>สัปดาห์</th><th>จ.</th><th>อ.</th><th>พ.</th><th>พฤ.</th><th>ศ.</th><th>ส.–อา.</th></tr><tr><td>1</td><td>วอร์มอัพ</td><td>คาร์ดิโอเบา</td><td>ยืดเหยียด</td><td>คาร์ดิโอเบา</td><td>ฟูลบอดี้</td><td>พัก</td></tr><tr><td>2</td><td>คาร์ดิโอ</td><td>HIIT</td><td>ยืดเหยียด</td><td>คาร์ดิโอ</td><td>HIIT</td><td>พัก</td></tr><tr><td>3</td><td>HIIT</td><td>คาร์ดิโอ</td><td>โยคะ</td><td>HIIT</td><td>ฟูลบอดี้</td><td>เดินเบา</td></tr><tr><td>4</td><td>HIIT</td><td>ฟูลบอดี้</td><td>โยคะ</td><td>ทดสอบผล</td><td>สรุปผล</td><td>พัก</td></tr></table></div>
+<h2>เปรียบเทียบแพ็กเกจ</h2><div class="tw card"><table><tr><th>แพ็กเกจ</th><th>ราคา</th><th>วิดีโอ</th><th>ตารางฝึก</th><th>โค้ชตอบแชท</th></tr><tr><td>Basic</td><td>${f(c.p)}</td><td>มี</td><td>มี</td><td>ไม่มี</td></tr><tr><td>Plus</td><td>${f(c.p+500)}</td><td>มี</td><td>มี</td><td>มี 30 วัน</td></tr><tr><td>Pro</td><td>${f(c.p+1200)}</td><td>มี</td><td>มี</td><td>มี + แผนอาหาร</td></tr></table></div>
+`};
+document.getElementById("app").innerHTML=render(new URLSearchParams(location.search).get("id"));
+</script>
+</body>
+</html>

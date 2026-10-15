@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ลงประกาศคอร์ส / สมัครเป็นเทรนเนอร์ | HEALTH & FIT</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310b981'%3E%3Cpath d='M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z'/%3E%3C/svg%3E">
+</head>
+<!-- หน้า: ลงประกาศคอร์ส / สมัครเป็นเทรนเนอร์  |  ผู้รับผิดชอบ: ____________ -->
+<body data-page="post">
+<header id="site-header"></header>
+<main>
+<h1>
+  <i data-ic="edit" data-s="26"></i>
+  หน้าลงประกาศคอร์ส / สมัครเป็นเทรนเนอร์
+</h1>
+<form class="card" style="max-width:720px;margin:auto" onsubmit="return doPost(event)">
+  <b>กรอกข้อมูลโปรแกรมออกกำลังกาย / ข้อมูลเทรนเนอร์</b>
+  <label>อัปโหลดรูปภาพและวิดีโอแนะนำคอร์ส</label>
+  <input type="file" accept="image/*,video/*" multiple>
+  <div class="row">
+    <div>
+      <label>ชื่อคอร์ส / โปรแกรม</label>
+      <input id="pn" required placeholder="เช่น Weight Loss 101">
+    </div>
+    <div>
+      <label>หมวดหมู่</label>
+      <select id="pc">
+        <option>ลดน้ำหนัก</option>
+        <option>สร้างกล้ามเนื้อ</option>
+        <option>ยืดหยุ่น</option>
+        <option>โภชนาการ</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div>
+      <label>ระดับผู้เรียน</label>
+      <select id="pl">
+        <option>เริ่มต้น</option>
+        <option>ปานกลาง</option>
+        <option>สูง</option>
+      </select>
+    </div>
+    <div>
+      <label>ราคาตั้งขาย (บาท)</label>
+      <input id="pp" type="number" min="0" required placeholder="0.00">
+    </div>
+  </div>
+  <div class="row">
+    <div>
+      <label>ชื่อเทรนเนอร์</label>
+      <input id="pt" placeholder="ชื่อ-นามสกุล">
+    </div>
+    <div>
+      <label>ประสบการณ์ (ปี)</label>
+      <input id="px" type="number" min="0">
+    </div>
+  </div>
+  <label>รายละเอียดคอร์ส</label>
+  <textarea id="pd" rows="3"></textarea>
+  <button class="btn w" style="margin-top:14px">ยืนยันการลงข้อมูล</button>
+</form>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/app.js"></script>
+<script>
+layout();
+</script>
+</body>
+</html>
